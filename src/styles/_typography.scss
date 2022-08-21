@@ -1,7 +1,7 @@
 %paragraph-16 {
   font-size: max(14px, 1.6rem);
   font-weight: 500;
-  line-height: max(18px, 2.4rem);
+  line-height: max(20px, 2.4rem);
   font-family: 'Manrope', sans-serif;
 }
 
@@ -11,10 +11,21 @@
   font-family: 'Manrope', sans-serif;
 }
 
-%paragraph-40 {
-  font-size: 4rem;
+%paragraph-20 {
+  font-size: max(14px, 2rem);
   font-weight: 400;
   font-family: 'Manrope', sans-serif;
+}
+
+%paragraph-40 {
+  font-size: 4rem;
+  line-height: 6rem;
+  font-weight: 400;
+  font-family: 'Manrope', sans-serif;
+  @include respondMax('mobile3x') {
+    font-size: Max(16px, 2rem);
+    line-height: Max(24px, 3rem);
+  }
 }
 
 %header-100 {
@@ -25,22 +36,12 @@
   }
 }
 
-%header-48 {
+%header-24 {
+  font-size: 2.4rem;
   font-weight: 700;
-  font-size: 4.8rem;
 }
 
-%header-150 {
-  font-weight: 700;
-  font-size: 15rem;
-  // font-size: clamp(3rem, 17vh, 10vw);
-  @include respondMax('mobile2x') {
-    font-size: 9rem;
-  }
-}
-
-%header-230 {
-  font-weight: 700;
-  font-size: 23rem;
-  font-size: clamp(5rem, 26vh, 16vw);
+%header-40 {
+  font-size: 4rem;
+  font-weight: 800;
 }
