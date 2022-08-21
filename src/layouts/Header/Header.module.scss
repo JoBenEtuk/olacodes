@@ -7,7 +7,7 @@
   @extend %flex-ac-jb;
   position: absolute;
   top: 0;
-  padding-top: var(--padding-1);
+  padding-top: 4rem;
   @include respondMax('mobile2x') {
     align-items: flex-start;
     border-bottom: 1px solid $col-black;

@@ -35,7 +35,7 @@ const Preloader = () => {
       <p className={S.header__time}>{time}</p>
       <nav>
         {links.map(link => (
-          <Link key={link} to=''>
+          <Link key={link} to={`/${link}`}>
             {link}
           </Link>
         ))}
