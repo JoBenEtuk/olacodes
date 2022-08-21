@@ -1,0 +1,73 @@
+a,
+button,
+[role='button'],
+[role='presentation'] {
+  // cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+html,
+body {
+  font-family: 'Manrope', sans-serif;
+  background: $col-white;
+  color: $col-black;
+  max-width: 100vw;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  scroll-behavior: smooth;
+  font-size: calc(100vw / 1440 * 10);
+  line-height: 1;
+
+  @include respondMax('mobile3x') {
+    font-size: calc(100vw / 600 * 10);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Public Sans', sans-serif;
+}
+
+#__gatsby {
+  flex-grow: 1;
+  overflow-x: hidden;
+}
+
+* {
+  outline: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+li,
+ol,
+dd,
+dl {
+  margin-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  list-style-type: none;
+  padding-inline-start: 0;
+}

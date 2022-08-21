@@ -1,0 +1,19 @@
+@import '@/styles/_mixins.scss';
+@import '@/styles/_variables.scss';
+@import '@/styles/_utils.scss';
+@import '@/styles/_typography.scss';
+.preloader {
+  @extend %cover;
+  z-index: 12;
+
+  @extend %center;
+  flex-direction: column;
+  gap: 2rem;
+
+  background: $col-white;
+  p {
+    @extend %paragraph-16;
+    @extend %center;
+    gap: 1.5rem;
+  }
+}

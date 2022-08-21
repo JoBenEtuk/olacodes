@@ -1,0 +1,53 @@
+%paragraph-16 {
+  font-size: max(12px, 1.6rem);
+  font-weight: 400;
+}
+
+%paragraph-20 {
+  font-size: max(12px, 2rem);
+  font-weight: 400;
+}
+
+%paragraph-24 {
+  font-size: max(16px, 2.4rem);
+}
+
+%paragraph-32 {
+  font-size: 3.2rem;
+  font-weight: 400;
+}
+
+%paragraph-40 {
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+%paragraph-48 {
+  font-size: 4.8rem;
+  font-weight: 400;
+}
+
+%header-96 {
+  font-size: 9.6rem;
+  font-weight: 700;
+}
+
+%header-48 {
+  font-weight: 700;
+  font-size: 4.8rem;
+}
+
+%header-150 {
+  font-weight: 700;
+  font-size: 15rem;
+  // font-size: clamp(3rem, 17vh, 10vw);
+  @include respondMax('mobile2x') {
+    font-size: 9rem;
+  }
+}
+
+%header-230 {
+  font-weight: 700;
+  font-size: 23rem;
+  font-size: clamp(5rem, 26vh, 16vw);
+}

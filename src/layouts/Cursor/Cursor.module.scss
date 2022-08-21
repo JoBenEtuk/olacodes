@@ -1,0 +1,18 @@
+@import '@/styles/_mixins.scss';
+@import '@/styles/_variables.scss';
+@import '@/styles/_utils.scss';
+.cursorStyle {
+  @extend %center;
+  pointer-events: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  z-index: 10;
+  background: $col-black;
+  @media (hover: none) and (pointer: coarse), (max-width: 500px) {
+    display: none;
+  }
+}
