@@ -18,7 +18,7 @@
     @extend %center;
     gap: 3rem;
     a {
-      @extend %paragraph-16;
+      @extend %link-16;
       text-transform: uppercase;
       position: relative;
       &:hover {
@@ -42,7 +42,7 @@
 
 .header__p {
   @extend %flex-ac;
-  @extend %paragraph-16;
+  @extend %link-16;
   gap: 2.5rem;
   text-transform: uppercase;
   small {
@@ -56,9 +56,13 @@
   }
   @include respondMax('mobile2x') {
     display: block;
+    * {
+      display: block;
+    }
   }
 }
+
 .header__time {
   display: inline-block;
-  @extend %paragraph-16;
+  @extend %link-16;
 }

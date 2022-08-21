@@ -24,7 +24,7 @@ const Home = () => {
           worldwide to tackle complex projects. Having collaborated with clients, Olacodes
           knows what it’s like to create, design and develop complex user interfaces.
         </p>
-        <div className={S.home__footer}>
+        <div>
           <h1>I design beautiful and intuitive products</h1>
           <footer>
             <ul>
