@@ -20,7 +20,7 @@ const Preloader = () => {
   return (
     <header className={S.header}>
       <p className={S.header__p}>
-        <span>OLACODES</span>
+        <Link to='/'>OLACODES</Link>
         {!isPhone && (
           <span>
             Lagos, NG

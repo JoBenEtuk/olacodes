@@ -5,28 +5,108 @@
 .footer {
   @extend %container;
   @extend %flex-ac-jb;
+  flex-direction: column;
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  background: $col-black-l1;
+  width: 100vw;
+  height: 100vh;
+  color: $col-white;
+
+  @include respondMax('mobile2x') {
+    padding-top: 16rem;
+  }
+
+  h1 {
+    @extend %header-100;
+    text-transform: uppercase;
+    line-height: 1.125;
+    font-family: 'Public Sans';
+  }
+}
+
+.footer__header {
+  @extend %flex-ac-jb;
+  gap: Max(30px, 4rem);
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.footer__header__left {
+  p {
+    @extend %paragraph-40;
+    white-space: nowrap;
+    margin-bottom: Max(15px, 1.5rem);
+  }
+  a {
+    @extend %paragraph-16;
+    display: block;
+    position: relative;
+    width: fit-content;
+    margin-bottom: Max(16px, 2rem);
+    &:hover {
+      &::after {
+        width: 0%;
+      }
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -0.5rem;
+      width: 100%;
+      background: $col-white;
+      height: 1.5px;
+      transition: width 300ms ease-in;
+    }
+  }
+  span {
+    @extend %paragraph-16;
+    display: block;
+  }
+}
+
+.footer__header__right {
+  width: Min(100%, 31rem);
+  @include respondMax('tablet2x') {
+    width: Min(100%, 310px);
+  }
+  @include respondMax('mobile3x') {
+    width: 100%;
+  }
+  li {
+    border-bottom: 1px solid $col-white;
+    margin-bottom: Max(10px, 1rem);
+    padding-bottom: Max(10px, 1rem);
+    a {
+      @extend %paragraph-16;
+      @extend %flex-ac-jb;
+
+      font-family: 'Public Sans', sans-serif;
+      svg {
+        transition: transform 200ms ease-in;
+      }
+      &:hover {
+        svg {
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+}
+
+.header {
+  @extend %container;
+  @extend %flex-ac-jb;
   position: absolute;
   top: 0;
   padding-top: 4rem;
   @include respondMax('mobile2x') {
     align-items: flex-start;
-    border-bottom: 1px solid $col-black;
+    border-bottom: 1px solid $col-white;
     padding-bottom: 1rem;
-  }
-  p {
-    @extend %paragraph-16;
-    small {
-      @extend %paragraph-16;
-      padding-top: 1rem;
-      display: none;
-      @include respondMax('mobile2x') {
-        display: inline-block;
-      }
-    }
-    span {
-      @extend %center;
-      gap: 1rem;
-    }
   }
 
   nav {
@@ -47,7 +127,7 @@
         left: 0;
         bottom: -0.5rem;
         width: 0%;
-        background: $col-black;
+        background: $col-white;
         height: 1.5px;
         transition: width 300ms ease-in;
       }
@@ -55,9 +135,21 @@
   }
 }
 
-.footer__time {
-  display: inline-block;
+.header__p {
+  @extend %flex-ac;
+  @extend %paragraph-16;
+  gap: 2.5rem;
+  text-transform: uppercase;
+  small {
+    @extend %paragraph-16;
+    padding-top: 1rem;
+    display: inline-block;
+  }
+  span {
+    @extend %center;
+    gap: 1rem;
+  }
   @include respondMax('mobile2x') {
-    display: none;
+    display: block;
   }
 }
