@@ -9,12 +9,8 @@
 %container {
   width: 100vw;
   margin-inline: auto;
-  padding-left: 6rem;
-  padding-right: 6rem;
-  @include respondMax('tablet') {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
+  padding-left: var(--padding-1);
+  padding-right: var(--padding-1);
 }
 
 %center {

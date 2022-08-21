@@ -1,35 +1,22 @@
 %paragraph-16 {
   font-size: max(12px, 1.6rem);
   font-weight: 400;
+  line-height: max(18px, 2.4rem);
+  font-family: 'Manrope', sans-serif;
 }
 
-%paragraph-20 {
-  font-size: max(12px, 2rem);
+%paragraph-18 {
+  font-size: max(14px, 1.8rem);
   font-weight: 400;
+  font-family: 'Manrope', sans-serif;
 }
 
-%paragraph-24 {
-  font-size: max(16px, 2.4rem);
-}
-
-%paragraph-32 {
-  font-size: 3.2rem;
-  font-weight: 400;
-}
-
-%paragraph-40 {
-  font-size: 4rem;
-  font-weight: 400;
-}
-
-%paragraph-48 {
-  font-size: 4.8rem;
-  font-weight: 400;
-}
-
-%header-96 {
-  font-size: 9.6rem;
-  font-weight: 700;
+%header-100 {
+  font-size: 10rem;
+  font-weight: 800;
+  @include respondMax('mobile3x') {
+    font-size: 4rem;
+  }
 }
 
 %header-48 {

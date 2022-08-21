@@ -18,7 +18,7 @@ function SEO({
         lang,
       }}
       // eslint-disable-next-line quotes
-      title={"Jo Ben'Etuk"}
+      title={'Olacodes'}
       meta={[
         {
           name: 'description',

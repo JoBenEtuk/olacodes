@@ -18,18 +18,21 @@ const Preloader = () => {
   return (
     <header className={S.header}>
       <p>
-        Lagos, NG
-        <svg
-          width='6'
-          height='7'
-          viewBox='0 0 6 7'
-          fill='none'
-          xmlns='http://www.w3.org/2000/svg'>
-          <circle cx='3' cy='3.5' r='3' fill='black' />
-        </svg>
-        SW 22
+        <span>
+          Lagos, NG
+          <svg
+            width='6'
+            height='7'
+            viewBox='0 0 6 7'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'>
+            <circle cx='3' cy='3.5' r='3' fill='black' />
+          </svg>
+          SW 22
+        </span>
+        <small>{time}</small>
       </p>
-      <p>{time}</p>
+      <p className={S.header__time}>{time}</p>
       <nav>
         {links.map(link => (
           <Link key={link} to=''>

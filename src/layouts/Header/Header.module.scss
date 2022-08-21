@@ -5,11 +5,28 @@
 .header {
   @extend %container;
   @extend %flex-ac-jb;
-  padding-top: 4rem;
+  position: absolute;
+  top: 0;
+  padding-top: var(--padding-1);
+  @include respondMax('mobile2x') {
+    align-items: flex-start;
+    border-bottom: 1px solid $col-black;
+    padding-bottom: 1rem;
+  }
   p {
     @extend %paragraph-16;
-    @extend %center;
-    gap: 1rem;
+    small {
+      @extend %paragraph-16;
+      padding-top: 1rem;
+      display: none;
+      @include respondMax('mobile2x') {
+        display: inline-block;
+      }
+    }
+    span {
+      @extend %center;
+      gap: 1rem;
+    }
   }
 
   nav {
@@ -29,11 +46,18 @@
         position: absolute;
         left: 0;
         bottom: -0.5rem;
-        width: 100%;
+        width: 0%;
         background: $col-black;
         height: 1.5px;
         transition: width 300ms ease-in;
       }
     }
+  }
+}
+
+.header__time {
+  display: inline-block;
+  @include respondMax('mobile2x') {
+    display: none;
   }
 }

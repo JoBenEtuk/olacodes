@@ -2,4 +2,18 @@
 
 $col-white: #ffffff;
 $col-black: #000000;
+$col-blue: #2a3ffb;
 $col-black-l1: #232323;
+
+:root {
+  --padding-1: 6rem;
+  --padding-2: 3rem;
+  --padding-top: 14rem;
+}
+
+@include respondMax('tablet') {
+  :root {
+    --padding-1: 3rem;
+    --padding-2: 2rem;
+  }
+}
