@@ -430,13 +430,3 @@ const zone = Intl.DateTimeFormat().resolvedOptions().timeZone
 const tzArr = zone.split('/')
 export const userCity = tzArr[tzArr.length - 1]
 export const userCountry = timezone[userCity]
-
-// setInterval(() => {
-//   const date = new Date()
-//   const time = date.toLocaleString('en-US', {
-//     hour: 'numeric',
-//     minute: 'numeric',
-//     hour12: true,
-//   })
-//   document.getElementById('time').innerHTML = `${time} - ${userCity}, ${userCountry}`
-// }, 1000)

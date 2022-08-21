@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet'
 import React, { ReactNode } from 'react'
 import Preloader from './Preloader'
-// import Header from './Header'
+import Header from './Header'
 import SEO from '@/components/SEO'
 import Cursor from './Cursor'
 
@@ -21,8 +21,8 @@ const Layout = ({ children }: ILayout): JSX.Element => {
           rel='stylesheet'></link>
       </Helmet>
       <main>
-        <Preloader />
-        {/* <Header /> */}
+        {/* <Preloader /> */}
+        <Header />
 
         <Cursor />
         <SEO />

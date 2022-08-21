@@ -1,0 +1,39 @@
+@import '@/styles/_mixins.scss';
+@import '@/styles/_variables.scss';
+@import '@/styles/_utils.scss';
+@import '@/styles/_typography.scss';
+.header {
+  @extend %container;
+  @extend %flex-ac-jb;
+  padding-top: 4rem;
+  p {
+    @extend %paragraph-16;
+    @extend %center;
+    gap: 1rem;
+  }
+
+  nav {
+    @extend %center;
+    gap: 3rem;
+    a {
+      @extend %paragraph-16;
+      text-transform: uppercase;
+      position: relative;
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -0.5rem;
+        width: 100%;
+        background: $col-black;
+        height: 1.5px;
+        transition: width 300ms ease-in;
+      }
+    }
+  }
+}
