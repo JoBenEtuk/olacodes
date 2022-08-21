@@ -2,7 +2,7 @@
 @import '@/styles/_variables.scss';
 @import '@/styles/_utils.scss';
 @import '@/styles/_typography.scss';
-.header {
+.footer {
   @extend %container;
   @extend %flex-ac-jb;
   position: absolute;
@@ -12,6 +12,21 @@
     align-items: flex-start;
     border-bottom: 1px solid $col-black;
     padding-bottom: 1rem;
+  }
+  p {
+    @extend %paragraph-16;
+    small {
+      @extend %paragraph-16;
+      padding-top: 1rem;
+      display: none;
+      @include respondMax('mobile2x') {
+        display: inline-block;
+      }
+    }
+    span {
+      @extend %center;
+      gap: 1rem;
+    }
   }
 
   nav {
@@ -40,25 +55,9 @@
   }
 }
 
-.header__p {
-  @extend %flex-ac;
-  @extend %paragraph-16;
-  gap: 2.5rem;
-  text-transform: uppercase;
-  small {
-    @extend %paragraph-16;
-    padding-top: 1rem;
-    display: inline-block;
-  }
-  span {
-    @extend %center;
-    gap: 1rem;
-  }
-  @include respondMax('mobile2x') {
-    display: block;
-  }
-}
-.header__time {
+.footer__time {
   display: inline-block;
-  @extend %paragraph-16;
+  @include respondMax('mobile2x') {
+    display: none;
+  }
 }
