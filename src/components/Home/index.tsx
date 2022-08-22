@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Splitting from 'splitting'
+import { preloader } from '@/animations'
 import { useEffect } from 'react'
 
 import * as S from './Home.module.scss'
@@ -22,6 +23,7 @@ const Home = () => {
 
   useEffect(() => {
     Splitting()
+    preloader()
   }, [])
 
   return (

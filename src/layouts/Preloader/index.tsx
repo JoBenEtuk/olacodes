@@ -1,6 +1,5 @@
 import Splitting from 'splitting'
 
-import { preloader } from '@/animations'
 import React, { useEffect, useState } from 'react'
 import * as S from './Preloader.module.scss'
 
@@ -31,10 +30,7 @@ const Preloader = () => {
   }, [])
 
   useEffect(() => {
-    if (typeof document !== 'undefined') {
-      Splitting()
-    }
-    preloader()
+    Splitting()
   }, [])
 
   useEffect(() => {
