@@ -64,3 +64,75 @@
     }
   }
 }
+
+.works__items {
+  display: block;
+  position: relative;
+  min-height: 100vh;
+}
+.works__work {
+  background: $col-white;
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  padding-top: 4rem;
+  position: sticky;
+  top: 3rem;
+  @include respondMax('tablet') {
+    flex-direction: column;
+  }
+}
+.works__work__left {
+  width: Max(300px, 44rem);
+  @include respondMax('tablet') {
+    width: 100%;
+  }
+  span {
+    @extend %paragraph-16;
+    font-family: 'Public Sans', sans-serif;
+    margin-bottom: 1.25rem;
+    display: block;
+  }
+  h3 {
+    @extend %header-24;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  p {
+    @extend %link-16;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+  a {
+    @extend %paragraph-16;
+    font-weight: 700;
+    font-family: 'Public Sans';
+    color: $col-blue;
+    position: relative;
+    &:hover {
+      &::after {
+        width: 0%;
+      }
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -0.5rem;
+      width: 100%;
+      background: $col-blue;
+      height: 1px;
+      transition: width 300ms ease-in;
+    }
+  }
+}
+.works__work__right {
+  width: 55%;
+  @include respondMax('tablet') {
+    width: 100%;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

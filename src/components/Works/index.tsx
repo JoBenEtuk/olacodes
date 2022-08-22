@@ -1,12 +1,15 @@
-/* eslint-disable quotes */
+// import { StaticImage } from 'gatsby-plugin-image'
 import { useMediaQuery } from '@/hooks'
 import Footer from '@/layouts/Footer'
+import { works } from '@/mocks'
+import { slugify } from '@/utils/slug.utils'
+import { Link } from 'gatsby'
 import * as React from 'react'
 import * as S from './Works.module.scss'
 
 const Works = () => {
   const isPhone = useMediaQuery('(max-width: 768px)')
-
+  console.log(works)
   return (
     <>
       <section className={S.works}>
@@ -31,8 +34,32 @@ const Works = () => {
               </small>
             )}
           </header>
+
+          <section className={S.works__items}>
+            {works.map((works, index) => (
+              <article key={index} className={S.works__work}>
+                <div className={S.works__work__left}>
+                  <span>{works.date}</span>
+                  <h3>{works.name}</h3>
+                  <p>{works.description}</p>
+                  <Link to={`/${slugify(works.name)}`}>View Project</Link>
+                </div>
+                <div className={S.works__work__right}>
+                  <img
+                    loading='lazy'
+                    src={works.identityImages[1]}
+                    alt='A dinosaur'
+                    placeholder='blurred'
+                    width={782}
+                    height={500}
+                  />
+                </div>
+              </article>
+            ))}
+          </section>
         </div>
       </section>
+      <div className='empty'></div>
       <Footer />
     </>
   )
