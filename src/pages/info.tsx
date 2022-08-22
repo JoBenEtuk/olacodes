@@ -1,8 +1,10 @@
 import Info from '@/components/Info'
 import * as React from 'react'
 
-const index = (): JSX.Element => {
-  return <Info />
+const index = () => {
+  if (typeof document !== 'undefined') {
+    return <Info />
+  }
 }
 
 export default index
