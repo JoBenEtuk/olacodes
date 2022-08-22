@@ -21,7 +21,8 @@
       @extend %link-16;
       text-transform: uppercase;
       position: relative;
-      &:hover {
+      &:hover,
+      &.active {
         &::after {
           width: 100%;
         }

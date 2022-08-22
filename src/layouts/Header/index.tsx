@@ -40,7 +40,7 @@ const Preloader = () => {
       {!isPhone && <p className={S.header__time}>{time}</p>}
       <nav>
         {links.map(link => (
-          <Link key={link} to={`/${link}`}>
+          <Link activeClassName={S.active} key={link} to={`/${link}`}>
             {link}
           </Link>
         ))}
