@@ -4,6 +4,7 @@
 @import '@/styles/_typography.scss';
 .preloader {
   @extend %cover;
+  position: fixed;
   z-index: 12;
 
   @extend %center;
@@ -12,8 +13,21 @@
 
   background: $col-white;
   p {
+    span {
+      display: inline-block;
+      @extend %paragraph-16;
+    }
+  }
+  div {
     @extend %paragraph-16;
-    @extend %center;
     gap: 1.5rem;
+    // overflow: hidden;
+    span {
+      opacity: 0;
+      font-size: Max(20px, 2rem);
+      // display: inline-block;
+      position: relative;
+      // top: 2rem;
+    }
   }
 }

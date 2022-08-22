@@ -1,9 +1,13 @@
+import Splitting from 'splitting'
+
+import { preloader } from '@/animations'
 import React, { useEffect, useState } from 'react'
 import * as S from './Preloader.module.scss'
 
 const Preloader = () => {
   // PRELOADER
   const [preload, setPreload] = useState<string | null>(null)
+  const [percent, setPercent] = useState<number>(0)
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -26,21 +30,33 @@ const Preloader = () => {
     }
   }, [])
 
+  useEffect(() => {
+    Splitting()
+    preloader()
+  }, [])
+
+  useEffect(() => {
+    const timer = () => {
+      setPercent(percent + 1)
+    }
+    if (percent >= 100) {
+      return
+    }
+    const id = setInterval(timer, 30)
+    return () => clearInterval(id)
+  }, [percent])
+
   return (
-    <div className={S.preloader}>
-      <p>Loading 10%</p>
-      <p>
-        From Lagos, NG
-        <svg
-          width='6'
-          height='7'
-          viewBox='0 0 6 7'
-          fill='none'
-          xmlns='http://www.w3.org/2000/svg'>
-          <circle cx='3' cy='3.5' r='3' fill='black' />
-        </svg>
-        SW 22
+    <div className={S.preloader} data-animation='preloader'>
+      <p data-animation='preloader__percent'>
+        <span>Loading {percent}%</span>
       </p>
+      <div data-splitting='chars'>
+        From Lagos, NG{'  '}
+        <span>&#x2022;</span>
+        {'  '}
+        SW 22
+      </div>
     </div>
   )
 }

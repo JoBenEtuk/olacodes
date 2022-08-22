@@ -21,7 +21,7 @@ const Layout = ({ children }: ILayout): JSX.Element => {
           rel='stylesheet'></link>
       </Helmet>
       <main>
-        {/* <Preloader /> */}
+        <Preloader />
         <Header />
 
         <Cursor />
