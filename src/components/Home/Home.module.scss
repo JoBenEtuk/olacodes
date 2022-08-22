@@ -26,12 +26,24 @@
     @include respondMax('tablet2x') {
       width: Min(100%, 550px);
     }
+    span {
+      position: relative;
+      top: 2rem;
+    }
   }
   h1 {
     @extend %header-100;
     text-transform: uppercase;
     line-height: 1.125;
     padding-bottom: var(--padding-2);
+    & > span {
+      display: block;
+      overflow: clip;
+      & > span {
+        display: block;
+        position: relative;
+      }
+    }
   }
   footer {
     @extend %flex-ac-jb;

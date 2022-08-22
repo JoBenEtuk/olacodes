@@ -1,4 +1,7 @@
 import * as React from 'react'
+import Splitting from 'splitting'
+import { useEffect } from 'react'
+
 import * as S from './Home.module.scss'
 
 const Home = () => {
@@ -16,16 +19,28 @@ const Home = () => {
       title: 'Instagram',
     },
   ]
+
+  useEffect(() => {
+    Splitting()
+  }, [])
+
   return (
     <section className={S.home}>
-      <div className={S.home__wrapper}>
-        <p>
+      <div data-animation='home' className={S.home__wrapper}>
+        <p data-splitting='words'>
           Olacodes is a user interface designer working with agencies and startups
           worldwide to tackle complex projects. Having collaborated with clients, Olacodes
           knows what it’s like to create, design and develop complex user interfaces.
         </p>
         <div>
-          <h1>I design beautiful and intuitive products</h1>
+          <h1 data-animation='home__h1'>
+            <span>
+              <span>I design beautiful and</span>
+            </span>
+            <span>
+              <span>intuitive products</span>
+            </span>
+          </h1>
           <footer>
             <ul>
               {links.map(({ href, title }) => (
