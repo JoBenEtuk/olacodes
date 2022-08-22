@@ -31,7 +31,9 @@ const Preloader = () => {
   }, [])
 
   useEffect(() => {
-    Splitting()
+    if (typeof document !== 'undefined') {
+      Splitting()
+    }
     preloader()
   }, [])
 
