@@ -1,11 +1,11 @@
 import { Helmet } from 'react-helmet'
 import React, { ReactNode } from 'react'
-import Header from './Header'
 import SEO from '@/components/SEO'
-import Cursor from './Cursor'
 
 import loadable from '@loadable/component'
 const Preloader = loadable(() => import('./Preloader'))
+const Cursor = loadable(() => import('./Cursor'))
+const Header = loadable(() => import('./Header'))
 
 interface ILayout {
   children: ReactNode
