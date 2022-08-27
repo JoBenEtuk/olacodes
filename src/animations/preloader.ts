@@ -5,6 +5,7 @@ export const preloader = () => {
     .set(
       '[data-animation="home"] > p > span',
       {
+        top: '2rem',
         opacity: 0,
       },
       'start'
@@ -12,8 +13,7 @@ export const preloader = () => {
     .set(
       '[data-animation="home__h1"] > span > span',
       {
-        y: 250,
-        rotate: 10,
+        y: '100%',
       },
       'start'
     )
@@ -37,9 +37,9 @@ export const preloader = () => {
       '[data-animation="home"] > p > span',
       {
         opacity: 1,
-        top: 0,
-        stagger: 0.02,
-        ease: 'back.out(2.75)',
+        top: '0',
+        stagger: 0.005,
+        ease: 'back.out(2)',
         duration: 0.75,
       },
       'anim'
@@ -48,9 +48,49 @@ export const preloader = () => {
       '[data-animation="home__h1"] > span > span',
       {
         y: 0,
-        rotate: 0,
+        ease: 'expo.out',
+        duration: 1.5,
+        stagger: 0.2,
+      },
+      'anim'
+    )
+}
+
+export const preloader1 = () => {
+  GSAP.timeline()
+    .set(
+      '[data-animation="home"] > p > span',
+      {
+        top: '1rem',
+        opacity: 0,
+      },
+      'start'
+    )
+    .set(
+      '[data-animation="home__h1"] > span > span',
+      {
+        y: '100%',
+      },
+      'start'
+    )
+    .to(
+      '[data-animation="home"] > p > span',
+      {
+        opacity: 1,
+        top: '0',
+        stagger: 0.005,
         ease: 'back.out(2)',
-        duration: 1,
+        duration: 0.75,
+      },
+      'anim'
+    )
+    .to(
+      '[data-animation="home__h1"] > span > span',
+      {
+        y: 0,
+        ease: 'expo.out',
+        duration: 1.5,
+        stagger: 0.2,
       },
       'anim'
     )

@@ -2,35 +2,14 @@ import Splitting from 'splitting'
 
 import React, { useEffect, useState } from 'react'
 import * as S from './Preloader.module.scss'
+import { preloader } from '@/animations'
 
 const Preloader = () => {
-  // PRELOADER
-  const [preload, setPreload] = useState<string | null>(null)
   const [percent, setPercent] = useState<number>(0)
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setPreload(sessionStorage.getItem('preloader'))
-    }
-  }, [])
-
-  // Preloader state
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.onunload = function () {
-        sessionStorage.removeItem('preloader')
-      }
-    }
-    const timeout = setTimeout(() => {
-      sessionStorage.setItem('preloader', 'true')
-    }, 1000)
-    return () => {
-      clearTimeout(timeout)
-    }
-  }, [])
-
-  useEffect(() => {
     Splitting()
+    preloader()
   }, [])
 
   useEffect(() => {

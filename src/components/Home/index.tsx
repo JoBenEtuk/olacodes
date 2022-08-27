@@ -1,8 +1,6 @@
+import { preloader1 } from '@/animations'
 import * as React from 'react'
-import Splitting from 'splitting'
-import { preloader } from '@/animations'
-import { useEffect } from 'react'
-
+import { useEffect, useState } from 'react'
 import * as S from './Home.module.scss'
 
 const Home = () => {
@@ -21,18 +19,44 @@ const Home = () => {
     },
   ]
 
+  const _p =
+    'Olacodes is a user interface designer working with agencies and startups worldwide to tackle complex projects. Having collaborated with clients, Olacodes knows what it’s like to create, design and develop complex user interfaces.'
+
+  // PRELOADER
+  const [preload, setPreload] = useState<string | null>(null)
+
   useEffect(() => {
-    Splitting()
-    preloader()
+    if (typeof window !== 'undefined') {
+      setPreload(sessionStorage.getItem('preloader'))
+    }
   }, [])
+
+  // Preloader state
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.onunload = function () {
+        sessionStorage.removeItem('preloader')
+      }
+    }
+    const timeout = setTimeout(() => {
+      sessionStorage.setItem('preloader', 'true')
+    }, 1000)
+    return () => {
+      clearTimeout(timeout)
+    }
+  }, [])
+
+  useEffect(() => {
+    preload ? preloader1() : null
+  }, [preload])
 
   return (
     <section className={S.home}>
       <div data-animation='home' className={S.home__wrapper}>
-        <p data-splitting='words'>
-          Olacodes is a user interface designer working with agencies and startups
-          worldwide to tackle complex projects. Having collaborated with clients, Olacodes
-          knows what it’s like to create, design and develop complex user interfaces.
+        <p>
+          {[..._p].map((item, index) => (
+            <span key={index}>{item}</span>
+          ))}
         </p>
         <div>
           <h1 data-animation='home__h1'>

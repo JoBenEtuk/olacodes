@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import React, { useState } from 'react'
 import * as S from './Header.module.scss'
 
-const Preloader = () => {
+const Header = () => {
   const isPhone = useMediaQuery('(max-width: 481px)')
   const [time, setTime] = useState<string>('00:00')
   const links = ['info', 'works']
@@ -49,4 +49,4 @@ const Preloader = () => {
   )
 }
 
-export default Preloader
+export default Header

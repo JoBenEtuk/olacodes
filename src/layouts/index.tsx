@@ -3,7 +3,8 @@ import React, { ReactNode } from 'react'
 import SEO from '@/components/SEO'
 
 import loadable from '@loadable/component'
-const Preloader = loadable(() => import('./Preloader'))
+import Preloader from './Preloader'
+// const Preloader = loadable(() => import('./Preloader'))
 const Cursor = loadable(() => import('./Cursor'))
 const Header = loadable(() => import('./Header'))
 
