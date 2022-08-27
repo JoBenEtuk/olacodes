@@ -25,11 +25,8 @@ const Info = () => {
     },
   ]
   useEffect(() => {
-    if (typeof document !== 'undefined') {
-      Splitting()
-    }
+    Splitting()
   }, [])
-
   return (
     <>
       <section className={S.info}>
