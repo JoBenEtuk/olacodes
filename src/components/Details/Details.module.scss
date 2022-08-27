@@ -1,0 +1,10 @@
+@import '@/styles/_mixins.scss';
+@import '@/styles/_variables.scss';
+@import '@/styles/_utils.scss';
+@import '@/styles/_typography.scss';
+
+.details {
+  @extend %container;
+  padding-top: var(--padding-top);
+  padding-bottom: 10rem;
+}

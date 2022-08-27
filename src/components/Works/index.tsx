@@ -9,7 +9,7 @@ import * as S from './Works.module.scss'
 
 const Works = () => {
   const isPhone = useMediaQuery('(max-width: 768px)')
-  console.log(works)
+
   return (
     <>
       <section className={S.works}>
@@ -42,7 +42,7 @@ const Works = () => {
                   <span>{works.date}</span>
                   <h3>{works.name}</h3>
                   <p>{works.description}</p>
-                  <Link to={`/${slugify(works.name)}`}>View Project</Link>
+                  <Link to={`/works/${slugify(works.name)}`}>View Project</Link>
                 </div>
                 <div className={S.works__work__right}>
                   <img
