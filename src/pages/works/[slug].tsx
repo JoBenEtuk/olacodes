@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Details from '@/components/Details'
 import * as React from 'react'
 
-const index = (): JSX.Element => {
-  return <Details />
+const index = (props: any): JSX.Element => {
+  return <Details slug={props.slug} />
 }
 
 export default index

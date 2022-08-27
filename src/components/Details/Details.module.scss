@@ -8,3 +8,35 @@
   padding-top: var(--padding-top);
   padding-bottom: 10rem;
 }
+
+.details__wrapper {
+}
+
+.details__top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  div {
+    width: 40rem;
+    @include respondMax('mobile3x') {
+      width: 100%;
+    }
+  }
+  dl {
+    margin-bottom: 2.5rem;
+    dt {
+      @extend %paragraph-16;
+      font-family: 'Public Sans';
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $col-black;
+      margin-bottom: 1rem;
+    }
+
+    dd {
+      @extend %paragraph-16;
+      font-family: 'Public Sans';
+      margin-bottom: 1rem;
+    }
+  }
+}

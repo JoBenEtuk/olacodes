@@ -1,1 +1,1 @@
-export { works } from './works.mock.'
+export { works } from './works.mock'

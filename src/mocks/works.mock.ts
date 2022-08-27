@@ -42,7 +42,7 @@ export const works: {
     ],
     type: ['Website'],
     date: 'Aug 22 - Sept 22',
-    name: 'Sarv Cosmetics',
+    name: 'Sarv Cosmetic',
     description:
       'Brand Identity is a photography studio located in Lagos, Nigeria but available nationwide. We make your special memories come to life on canvas and film. Our passion for photography means that we will go the extra mile for you.',
     identity:
@@ -64,7 +64,7 @@ export const works: {
     ],
     type: ['Website'],
     date: 'Aug 22 - Sept 22',
-    name: 'Sarv Cosmetics',
+    name: 'Sarv Cosmetic1',
     description:
       'Brand Identity is a photography studio located in Lagos, Nigeria but available nationwide. We make your special memories come to life on canvas and film. Our passion for photography means that we will go the extra mile for you.',
     identity:
