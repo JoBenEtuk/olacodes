@@ -19,7 +19,6 @@
         "lint:fix": "yarn lint --fix"
     },
     "dependencies": {
-        "@loadable/component": "^5.15.2",
         "eslint-webpack-plugin": "^3.1.1",
         "gatsby": "^4.17.0",
         "gatsby-plugin-image": "^2.17.0",

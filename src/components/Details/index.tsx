@@ -12,6 +12,7 @@ const Details = ({ slug }: { slug: string }) => {
     setWork(works.filter(work => slugify(work.name) === slug)[0])
   }, [works])
   console.log(work)
+  if (!work) return null
 
   return (
     <>
