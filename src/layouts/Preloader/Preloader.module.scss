@@ -21,13 +21,11 @@
   div {
     @extend %paragraph-16;
     gap: 1.5rem;
-    // overflow: hidden;
+    overflow: hidden;
     span {
-      opacity: 0;
       font-size: Max(20px, 2rem);
-      // display: inline-block;
+      display: inline-block;
       position: relative;
-      // top: 2rem;
     }
   }
 }

@@ -17,18 +17,18 @@ export const preloader = () => {
       },
       'start'
     )
-    .to(
-      '[data-animation="preloader"]',
+    .fromTo(
+      '[data-animation="preloader"] > div  span',
       {
-        height: '100vh',
-        ease: 'power3.inOut',
+        top: '3rem',
       },
-      'start'
+      {
+        delay: 3,
+        top: 0,
+        ease: 'back.out(3)',
+        duration: 1.5,
+      }
     )
-    .to('[data-animation="preloader"] > div  span', {
-      opacity: 1,
-      stagger: 0.075,
-    })
     .to('[data-animation="preloader"]', {
       delay: 1,
       autoAlpha: 0,

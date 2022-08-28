@@ -1,5 +1,3 @@
-import Splitting from 'splitting'
-
 import React, { useEffect, useState } from 'react'
 import * as S from './Preloader.module.scss'
 import { preloader } from '@/animations'
@@ -8,7 +6,6 @@ const Preloader = () => {
   const [percent, setPercent] = useState<number>(0)
 
   useEffect(() => {
-    Splitting()
     preloader()
   }, [])
 
@@ -28,11 +25,10 @@ const Preloader = () => {
       <p data-animation='preloader__percent'>
         <span>Loading {percent}%</span>
       </p>
-      <div data-splitting='chars'>
-        From Lagos, NG{'  '}
-        <span>&#x2022;</span>
-        {'  '}
-        SW 22
+      <div>
+        <span>
+          From Lagos, NG{'  '} &#x2022; {'  '}SW 22
+        </span>
       </div>
     </div>
   )
