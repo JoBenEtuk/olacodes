@@ -47,7 +47,7 @@ const Works = () => {
                 <div className={S.works__work__right}>
                   <img
                     loading='lazy'
-                    src={works.identityImages[1]}
+                    src={works.coverImage}
                     alt='A dinosaur'
                     placeholder='blurred'
                     width={782}

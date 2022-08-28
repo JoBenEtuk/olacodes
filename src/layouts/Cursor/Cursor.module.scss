@@ -11,7 +11,8 @@
   height: 1rem;
   border-radius: 100%;
   z-index: 10;
-  background: $col-black;
+  background: $col-white;
+  mix-blend-mode: difference;
   @media (hover: none) and (pointer: coarse), (max-width: 500px) {
     display: none;
   }

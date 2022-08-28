@@ -25,7 +25,7 @@ export const preloader = () => {
       {
         delay: 3,
         top: 0,
-        ease: 'back.out(3)',
+        ease: 'back.out(1.5)',
         duration: 1.5,
       }
     )
