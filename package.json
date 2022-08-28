@@ -34,7 +34,6 @@
         "react-dom": "^18.1.0",
         "react-helmet": "^6.1.0",
         "sass": "^1.52.3",
-        "splitting": "^1.0.6",
         "tsconfig-paths-webpack-plugin": "^3.5.2"
     },
     "devDependencies": {

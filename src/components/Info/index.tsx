@@ -1,8 +1,6 @@
 /* eslint-disable quotes */
 import Footer from '@/layouts/Footer'
 import * as React from 'react'
-import Splitting from 'splitting'
-import { useEffect } from 'react'
 
 import * as S from './Info.module.scss'
 
@@ -24,9 +22,7 @@ const Info = () => {
         'When the design is accepted and approved by the client at the conclusion of the project, I collaborate with developers to ensure that reality fits the concept/idea.',
     },
   ]
-  useEffect(() => {
-    Splitting()
-  }, [])
+
   return (
     <>
       <section className={S.info}>
@@ -41,7 +37,7 @@ const Info = () => {
           </header>
 
           <div className={S.info__description}>
-            <p data-splitting='words'>
+            <p>
               I am is a user interface designer working with agencies and startups
               worldwide to tackle complex projects. Having collaborated with clients,
               Olacodes knows what it’s like to create, design and develop complex user
