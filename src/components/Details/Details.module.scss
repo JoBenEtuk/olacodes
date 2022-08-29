@@ -41,6 +41,26 @@
       @extend %paragraph-16;
       font-family: 'Public Sans';
       margin-bottom: 1rem;
+      a {
+        color: $col-blue;
+        position: relative;
+        font-weight: 700;
+        &:hover {
+          &::after {
+            width: 0%;
+          }
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -0.5rem;
+          width: 100%;
+          background: $col-blue;
+          height: 1.5px;
+          transition: width 300ms ease-in;
+        }
+      }
     }
   }
 }

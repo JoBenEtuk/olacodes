@@ -39,6 +39,12 @@ const Details = ({ slug }: { slug: string }) => {
                   <dd key={i}>{type}</dd>
                 ))}
               </dl>
+              <dl>
+                <dt>Link</dt>
+                <dd>
+                  <a href={work.link}>Visit Website</a>
+                </dd>
+              </dl>
             </div>
           </div>
 

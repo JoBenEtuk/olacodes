@@ -28,7 +28,11 @@ const Info = () => {
               {info.infoText1}
               <br />
               <br />
-              {info.infoText2} <a>{info.companyName}</a>.
+              {info.infoText2}{' '}
+              <a href={info.companyLink} target='_blank' rel='noreferrer noopener'>
+                {info.companyName}
+              </a>
+              .
             </p>
           </div>
 

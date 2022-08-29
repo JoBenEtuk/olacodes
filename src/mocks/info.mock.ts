@@ -13,6 +13,7 @@ export interface IInfo {
   infoText2: string
   worksIntro: string
   companyName: string
+  companyLink: string
   process: { tag: string; description: string }[]
 }
 
@@ -34,6 +35,7 @@ export const info: IInfo = {
   infoText2:
     "Combining aesthetics and usefulness, I create solid user interfaces in an artistic way. I love to spend time improving the aesthetics of digital products without forgetting about usability. I'm currently working with the fine folks at",
   companyName: 'The Sole Company',
+  companyLink: '',
   process: [
     {
       tag: 'IDENTIFY',
