@@ -128,9 +128,7 @@ const Details = ({ slug }: { slug: string }) => {
 
               <div className={S.details__section6__works}>
                 {works[pageIndex + 1] && (
-                  <Link
-                    to={`/works/${slugify(works[pageIndex + 1].name)}`}
-                    className={S.details__section6__work}>
+                  <Link to={`/works/${slugify(works[pageIndex + 1].name)}`}>
                     <img src={works[pageIndex + 1].showImage} alt='' />
                     <div>
                       <p>Branding - Design</p>
@@ -140,9 +138,7 @@ const Details = ({ slug }: { slug: string }) => {
                   </Link>
                 )}
                 {works[pageIndex + 2] && (
-                  <Link
-                    to={`/works/${slugify(works[pageIndex + 2].name)}`}
-                    className={S.details__section6__work}>
+                  <Link to={`/works/${slugify(works[pageIndex + 2].name)}`}>
                     <img src={works[pageIndex + 2].showImage} alt='' />
                     <div>
                       <p>Branding - Design</p>
@@ -152,9 +148,7 @@ const Details = ({ slug }: { slug: string }) => {
                   </Link>
                 )}
                 {works[pageIndex + 3] && (
-                  <Link
-                    to={`/works/${slugify(works[pageIndex + 3].name)}`}
-                    className={S.details__section6__work}>
+                  <Link to={`/works/${slugify(works[pageIndex + 3].name)}`}>
                     <img src={works[pageIndex + 3].showImage} alt='' />
                     <div>
                       <p>Branding - Design</p>

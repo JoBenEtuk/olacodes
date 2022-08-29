@@ -1,4 +1,5 @@
 import { useMediaQuery } from '@/hooks'
+import { info } from '@/mocks'
 import { Link } from 'gatsby'
 import React, { useState } from 'react'
 import * as S from './Footer.module.scss'
@@ -7,19 +8,19 @@ const Footer = () => {
   const isPhone = useMediaQuery('(max-width: 481px)')
   const links: { href: string; title: string }[] = [
     {
-      href: '/LinkedIn',
+      href: `${info.linkedIn}`,
       title: 'LinkedIn',
     },
     {
-      href: '/Dribbble',
+      href: `${info.dribbble}`,
       title: 'Dribbble',
     },
     {
-      href: '/Are.na',
+      href: `${info.arena}`,
       title: 'Are.na',
     },
     {
-      href: '/Instagram',
+      href: `${info.instagram}`,
       title: 'Instagram',
     },
   ]
@@ -36,6 +37,9 @@ const Footer = () => {
     setTime(time)
   }, 1000)
 
+  if (!info) {
+    return null
+  }
   return (
     <section className={S.footer}>
       {isPhone && (
@@ -68,14 +72,14 @@ const Footer = () => {
       <header className={S.footer__header}>
         <div className={S.footer__header__left}>
           <p>Have an Idea?</p>
-          <a href='mailto:hello@olacodes.com'>hello@olacodes.com</a>
-          <a href='tel:+2348169945591'>+2348169945591</a>
+          <a href={`${info.mail}`}>{info.mail}</a>
+          <a href={`${info.phone}`}>{info.phone}</a>
           <span>©2022</span>
         </div>
 
         <ul className={S.footer__header__right}>
-          {links.map(({ href, title }) => (
-            <li key={href}>
+          {links.map(({ href, title }, index) => (
+            <li key={index}>
               <a href={href}>
                 {title}
                 <svg
@@ -94,7 +98,14 @@ const Footer = () => {
           ))}
         </ul>
       </header>
-      <h1>Let&apos;s work on something together</h1>
+      <h1>
+        <span>
+          <span>Let&apos;s work on</span>
+        </span>
+        <span>
+          <span>something together</span>
+        </span>
+      </h1>
       {/* </div> */}
     </section>
   )

@@ -24,6 +24,9 @@
     text-transform: uppercase;
     line-height: 1.125;
     font-family: 'Public Sans';
+    span {
+      display: inline-block;
+    }
   }
 }
 

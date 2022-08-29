@@ -129,6 +129,7 @@
 }
 
 .details__section4 {
+  display: block;
   &__gallery {
     display: grid;
     gap: 2rem;
@@ -156,6 +157,7 @@
 }
 
 .details__section6 {
+  display: block;
   h3 {
     @extend %header-40;
     text-transform: uppercase;

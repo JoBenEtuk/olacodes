@@ -78,8 +78,10 @@
   padding-top: 4rem;
   position: sticky;
   top: 3rem;
+  z-index: 0;
   @include respondMax('tablet') {
     flex-direction: column;
+    top: 5rem;
   }
 }
 .works__work__left {
@@ -128,11 +130,26 @@
 }
 .works__work__right {
   width: 55%;
+  background: #272727;
+  min-height: 50rem;
+  position: relative;
+  @extend %center;
+  p {
+    @extend %header-40;
+    color: #767575;
+  }
   @include respondMax('tablet') {
+    min-height: 40rem;
     width: 100%;
   }
   img {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 }

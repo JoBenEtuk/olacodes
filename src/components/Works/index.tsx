@@ -1,7 +1,7 @@
 // import { StaticImage } from 'gatsby-plugin-image'
 import { useMediaQuery } from '@/hooks'
 import Footer from '@/layouts/Footer'
-import { works } from '@/mocks'
+import { works, info } from '@/mocks'
 import { slugify } from '@/utils/slug.utils'
 import { Link } from 'gatsby'
 import * as React from 'react'
@@ -18,21 +18,11 @@ const Works = () => {
             <h1>
               <span>Selected Works</span>
               <span>
-                {!isPhone && (
-                  <small>
-                    Selecting befitting projects that I’ve worked on, both clients works
-                    and my personal projects that speak well of my digital design journey
-                  </small>
-                )}
+                {!isPhone && <small>{info.worksIntro}</small>}
                 <span>21-22</span>
               </span>
             </h1>
-            {isPhone && (
-              <small>
-                Selecting befitting projects that I’ve worked on, both clients works and
-                my personal projects that speak well of my digital design journey
-              </small>
-            )}
+            {isPhone && <small>{info.worksIntro}</small>}
           </header>
 
           <section className={S.works__items}>
@@ -45,11 +35,13 @@ const Works = () => {
                   <Link to={`/works/${slugify(works.name)}`}>View Project</Link>
                 </div>
                 <div className={S.works__work__right}>
+                  <p>
+                    Wahidi ©22 <br /> 0506
+                  </p>
                   <img
                     loading='lazy'
                     src={works.coverImage}
                     alt='A dinosaur'
-                    placeholder='blurred'
                     width={782}
                     height={500}
                   />

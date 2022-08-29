@@ -1,4 +1,5 @@
 import { preloader1 } from '@/animations'
+import { info } from '@/mocks'
 import * as React from 'react'
 import { useEffect, useState } from 'react'
 import * as S from './Home.module.scss'
@@ -6,21 +7,18 @@ import * as S from './Home.module.scss'
 const Home = () => {
   const links: { href: string; title: string }[] = [
     {
-      href: '/LinkedIn',
+      href: `${info.linkedIn}`,
       title: 'LinkedIn',
     },
     {
-      href: '/Dribbble',
+      href: `${info.dribbble}`,
       title: 'Dribbble',
     },
     {
-      href: '/Instagram',
+      href: `${info.instagram}`,
       title: 'Instagram',
     },
   ]
-
-  const _p =
-    'Olacodes is a user interface designer working with agencies and startups worldwide to tackle complex projects. Having collaborated with clients, Olacodes knows what it’s like to create, design and develop complex user interfaces.'
 
   // PRELOADER
   const [preload, setPreload] = useState<string | null>(null)
@@ -54,7 +52,7 @@ const Home = () => {
     <section className={S.home}>
       <div data-animation='home' className={S.home__wrapper}>
         <p>
-          {[..._p].map((item, index) => (
+          {[...info.intro].map((item, index) => (
             <span key={index}>{item}</span>
           ))}
         </p>
@@ -69,15 +67,14 @@ const Home = () => {
           </h1>
           <footer>
             <ul>
-              {links.map(({ href, title }) => (
-                <li key={href}>
+              {links.map(({ href, title }, index) => (
+                <li key={index}>
                   <a href={href}>{title}</a>
                 </li>
               ))}
             </ul>
             <p>
-              Contact me at{' '}
-              <a href='mailto:info@thesolecompany.com'>info@thesolecompany.com</a>
+              Contact me at <a href={`${info.mail}`}>{info.mail}</a>
             </p>
           </footer>
         </div>
